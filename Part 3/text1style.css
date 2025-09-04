@@ -1,0 +1,20 @@
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+body {
+    font-family: "Special Elite", system-ui;
+    margin-left: 2vw;
+    margin-right: 4vw;
+}
+
+#SignOff {
+    text-align: right;
+    margin-right: 10vw;
+}
+
+#citation {
+    margin-top: 10vh;
+}
