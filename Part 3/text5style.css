@@ -15,7 +15,6 @@ h5 {
     margin-bottom: 20px;
 }
 
-/* Paragraphs */
 p {
     font-family: "Helvetica Neue", sans-serif;
     font-size: 16px;
@@ -24,65 +23,45 @@ p {
     margin-bottom: 15px;
 }
 
-/* Emphasis */
-em {
-    font-style: italic;
-    font-weight: bold;
-    text-transform: none;
+.img-center {
+    text-align: center;
+    margin: 20px 0;
 }
 
-/* Bold text */
-b {
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* Lists */
 ul {
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 10px 40px;
+    margin: 15px 40px;
+    padding: 10px 20px;
+    list-style-type: disc;    /* default bullets */
+    float: none;              /* keeps it inside its container */
+    width: auto;              /* full width again */
 }
 
-/* ===========================
-   PART 4: Box Model
-   =========================== */
-
-/* Body container */
 body {
     margin: 40px;
     padding: 20px;
     border: 2px solid #ccc;
+    background-color: black;
+    color: white;
 }
 
-/* Section divs */
 div {
     margin-bottom: 25px;
     padding: 15px;
     border: 1px solid #eee;
 }
 
-/* Special “effect” section */
 div:nth-of-type(4) {
     margin: 30px auto;
-    padding: 20px;
-    border: 2px dashed #666;
+    padding: 15px 25px;
+    border-left: 4px solid #555;
+    background: #5d5c5c;
+    font-style: italic;
     width: 80%;
-    background-color: #fafafa;
+    color: black;
+}
+
+.section-title {
+    font-weight: bold;
+    text-transform: uppercase;
     text-align: center;
-}
-
-/* Float experiment for lists */
-ul {
-    float: right;
-    width: 40%;
-    border: 1px solid #aaa;
-    padding: 15px;
-    background-color: #f5f5f5;
-}
-
-/* Fixed-size experiment */
-div:last-of-type {
-    height: 50px;
-    border: 2px dotted #999;
 }
