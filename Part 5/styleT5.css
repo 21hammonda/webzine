@@ -1,0 +1,115 @@
+/*  Base Page Styling  */
+body {
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    background-color: black;
+    color: white;
+    max-width: 1000px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 30px;
+    font-family: "Helvetica Neue", sans-serif;
+
+    align-items: stretch; /* <-- forces equal height */
+}
+
+/* Intro text box (left column) */
+body > div:first-of-type {
+    grid-column: 1;
+    display: flex;           /* makes content inside align properly */
+    flex-direction: column;  /* keeps paragraphs stacked */
+    justify-content: space-between;
+}
+
+/* Image box (right column) */
+.img-center {
+    grid-column: 2;
+    display: flex;           /* keeps image centered */
+    align-items: center;
+    justify-content: center;
+}
+
+.img-center img {
+    max-width: 100%;
+    height: auto;
+    border: 4px solid #444;
+}
+
+
+/*  Titles  */
+h1 {
+    grid-column: 1 / -1; /* span both columns */
+    font-family: Georgia, serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+h5 {
+    grid-column: 1 / -1; /* span both columns */
+    font-family: "Courier New", monospace;
+    font-style: italic;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+/*  Regular Content Blocks  */
+div {
+    padding: 15px;
+    border: 1px solid #eee;
+    background: #111;
+}
+
+/*  Section Titles  */
+.section-title {
+    grid-column: 1 / -1; /* span both columns */
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background: #222;
+    padding: 10px;
+    border: 2px solid #555;
+}
+
+/*  Special Effect Block  */
+.special-block {
+    grid-column: 1 / -1; /* span both columns */
+    margin: 0;
+    padding: 20px 25px;
+    border-left: 6px solid #888;
+    background: #5d5c5c;
+    font-style: italic;
+    color: black;
+}
+
+/*  Lists  */
+ul {
+    margin: 15px 20px;
+    padding: 10px 20px;
+    list-style-type: disc;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+.section {
+    display: contents; /* let children flow into grid cells */
+}
+
+.section > div:first-child {
+    grid-column: 1; /* left column */
+}
+
+.section > div:last-child {
+    grid-column: 2; /* right column */
+}

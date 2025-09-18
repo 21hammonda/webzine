@@ -1,0 +1,105 @@
+/*Page Setup*/
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #000; /* black page background */
+    padding: 40px 0;
+    font-size: 12px;
+    color: #ddd;
+    margin: 0;
+}
+
+/*Container Flex Layout*/
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #000; /* keeps inside area solid black */
+    position: relative;
+}
+
+/*Individual Content Boxes*/
+.container > div {
+    background-color: #111;
+    padding: 20px;
+    flex: 1 1 300px; /* flexible box, min 300px */
+    color: #ddd;
+    position: relative;
+    z-index: 1; /* keep text above border layer */
+}
+
+/* Tiled GIF "pixel" border around each box */
+.container > div::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+
+    background-image: url("https://i.pinimg.com/originals/ef/8a/77/ef8a779ef2fcf2a4af039783be7da96a.gif");
+    background-repeat: repeat;
+    background-size: 40px 40px; /* tile size — adjust smaller/larger */
+    
+    z-index: -1; /* sit behind text box */
+}
+
+/*Special Styling*/
+
+/* First div (title) spans full width */
+.container > div:first-child {
+    flex: 1 1 100%;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+h5 {
+    font-size: 18px;
+    margin: 5px 0 15px 0;
+    color: #aaa;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Quote block */
+.quote {
+    font-style: italic;
+    border-left: 3px solid #aaa;
+    padding-left: 15px;
+    margin: 10px 0;
+    color: #ccc;
+}
+
+/* Ordered list inside a box */
+ol {
+    border: 2px solid #666;
+    padding: 12px 20px;
+    margin: 15px 0;
+    background-color: rgba(255,255,255,0.05);
+    list-style-position: inside;
+    color: #eee;
+}
+
+
+.container > div p,
+.container > div h1,
+.container > div h5,
+.container > div ol,
+.container > div .quote {
+    background-color: rgba(0, 0, 0, 0.9); /* mostly solid black */
+    padding: 8px 12px;                   /* breathing room */
+    border-radius: 4px;                  /* optional rounded corners */
+    display: inline-block;               /* so highlight wraps text */
+}
